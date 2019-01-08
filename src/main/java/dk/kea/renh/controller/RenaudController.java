@@ -52,6 +52,8 @@ public class RenaudController {
     @GetMapping("/details")
     public String details(@RequestParam("studentId") String studentId, Model model) {
         model.addAttribute("stu", studentRepo.read(Integer.parseInt(studentId)) );
+
+
         return "details";
     }
 
