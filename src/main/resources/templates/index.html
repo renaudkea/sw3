@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Students</title>
+    <link rel="stylesheet" type="text/css"
+          href="../../static/styles.css"
+          th:href="@{styles.css}"/>
+</head>
+<body>
+
+<h1>Students</h1>
+<p>Enrolled Students at KEA</p>
+<a href="/create" class="btn">CREATE</a>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Enrollment Date</td>
+        <td>Cpr</td>
+        <td>Knapper</td>
+    </tr>
+    <tr th:each="student: ${stu}">
+        <td th:text="${student.studentId}"/>
+        <td th:text="${student.firstName}"/>
+        <td th:text="${student.lastName}"/>
+        <td th:text="${student.enrollmentDate}"/>
+        <!-- http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#reformatting-dates-in-our-home-page -->
+        <td th:text="${student.cpr}"/>
+        <td><a th:href="@{/details(studentId=${student.studentId})}" class="btn" id="blue">DETAILS</a>
+            <a th:href="@{/delete(studentId=${student.studentId})}" class="btn" id="blue">DELETE</a></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, sans-serif;
+}
+/* table styles */
+/* https://www.w3schools.com/html/html_tables.asp */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px 8px 5px 8px;
+}
+
+/*  # = id
+    . = class
+*/
+
+/*.btn {
+    background-color: tomato;
+    padding: 5px;
+    margin: 10px;
+}*/
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px; /* https://www.w3schools.com/css/css3_borders.asp */
+    box-shadow: 1px 1px 1px #888888;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    margin-bottom: 5px;
+}
+#blue {
+    background-color: blue;
+}
